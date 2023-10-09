@@ -1,0 +1,14 @@
+.app {
+    display: flex;
+    width: 100vw;
+}
+
+.app .fields {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.app .curriculum-vitae {
+    flex: 1;
+}
