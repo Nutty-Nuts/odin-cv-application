@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 import "../styles/Field.css";
 
-export default function Field({ title, change, id }) {
+export default function Field({ title, change, id, value }) {
     return (
         <div className="field">
             <label htmlFor={id}>{title}</label>
-            <input type="text" onChange={change} id={id} />
+            <input type="text" onChange={change} id={id} defaultValue={value} />
         </div>
     );
 }
