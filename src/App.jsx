@@ -4,6 +4,7 @@ import "./styles/App.css";
 
 import Personal from "./components/Personal";
 import Education from "./components/Education";
+import Experience from "./components/Experience";
 
 function App() {
     const [personal, setPersonal] = useState({
@@ -26,7 +27,25 @@ function App() {
             endDate: "2022",
         },
     });
-    const [experience, setExperience] = useState([]);
+
+    const [experienceList, setExperienceList] = useState({
+        [uuid()]: {
+            company: "XYZ Company",
+            position: "Junior Developer",
+            startDate: "2030",
+            endDate: "2031",
+            description:
+                "Performed basic front-end development as a junior developer",
+        },
+    });
+
+    const [experience, setExperience] = useState({
+        company: "",
+        position: "",
+        startDate: "",
+        endDate: "",
+        description: "",
+    });
 
     const [education, setEducation] = useState({
         school: "",
@@ -47,7 +66,13 @@ function App() {
         const id = event.target.id;
 
         setEducation((prev) => ({ ...prev, [id]: value }));
-        console.log(education);
+    };
+
+    const handleExperienceChange = (event) => {
+        const value = event.target.value;
+        const id = event.target.id;
+
+        setExperience((prev) => ({ ...prev, [id]: value }));
     };
 
     const handleEducationSubmit = () => {
@@ -61,6 +86,18 @@ function App() {
         console.log(educationList);
     };
 
+    const handleExperienceSubmit = () => {
+        setExperienceList((prev) => ({ ...prev, [uuid()]: experience }));
+        setExperience(() => ({
+            company: "",
+            position: "",
+            startDate: "",
+            endDate: "",
+            description: "",
+        }));
+        console.log(educationList);
+    };
+
     return (
         <div className="app">
             <div className="fields">
@@ -69,6 +106,11 @@ function App() {
                     change={handleEducationChange}
                     education={educationList}
                     submit={handleEducationSubmit}
+                />
+                <Experience
+                    change={handleExperienceChange}
+                    experience={experienceList}
+                    submit={handleExperienceSubmit}
                 />
             </div>
             <div className="curriculum-vitae"></div>

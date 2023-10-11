@@ -1,4 +1,4 @@
-.education {
+.experience {
     background-color: white;
 
     box-sizing: border-box;
@@ -15,39 +15,39 @@
     flex-direction: column;
 }
 
-.education .header {
+.experience .header {
     display: flex;
     flex-direction: row;
 }
-.education .header > h2 {
+.experience .header > h2 {
     margin-top: 0px;
 }
-.education .header .education-header {
+.experience .header .experience-header {
     flex: 5;
 }
-.education .header .education-toggle {
+.experience .header .experience-toggle {
     text-align: center;
     flex: 1;
 }
 
-.education .record {
+.experience .record {
     box-sizing: border-box;
     background-color: whitesmoke;
     padding: 0.5rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
 }
-.education .record:first-child {
+.experience .record:first-child {
     margin-top: 1rem;
 }
 
-.education .degree-duration {
+.experience .degree-duration {
     display: flex;
     flex-direction: row;
 }
-.education .degree-duration > * {
+.experience .degree-duration > * {
     flex: 1;
 }
-.education .degree-duration .field:first-child {
+.experience .degree-duration .field:first-child {
     margin-right: 1rem;
 }
