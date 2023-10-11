@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+.curriculum-vitae-page {
+    width: calc(595px * 1.5);
+    height: calc(842px * 1.5);
+    background-color: white;
+
+    box-sizing: border-box;
+    box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 0.1);
+}
+
+.curriculum-vitae-page .icons {
+    margin: 0px;
+    margin-right: 1rem;
+}
+
+.curriculum-vitae-page .header {
+    background-color: darkcyan;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.curriculum-vitae-page .header > h1 {
+    margin: 0px;
+    padding-top: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.curriculum-vitae-page .content {
+    padding: 2rem;
+}
+.curriculum-vitae-page .content > h3 {
+    text-align: center;
+    background-color: rgba(95, 158, 160, 0.125);
+    color: rgb(48, 77, 78);
+    padding: 0.5rem;
+}
+
+.contact-information {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+.contact-information > * {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.entry-header {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+}
+.entry-header > * {
+    flex: 1;
+}
+
+.entry-date {
+    text-align: right;
+}

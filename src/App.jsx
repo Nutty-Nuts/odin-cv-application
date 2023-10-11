@@ -5,6 +5,7 @@ import "./styles/App.css";
 import Personal from "./components/Personal";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
+import CurriculumVitae from "./components/CurriculumVitae";
 
 function App() {
     const [personal, setPersonal] = useState({
@@ -113,7 +114,13 @@ function App() {
                     submit={handleExperienceSubmit}
                 />
             </div>
-            <div className="curriculum-vitae"></div>
+            <div className="curriculum-vitae">
+                <CurriculumVitae
+                    personal={personal}
+                    education={educationList}
+                    experience={experienceList}
+                />
+            </div>
         </div>
     );
 }

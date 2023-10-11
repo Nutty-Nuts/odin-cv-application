@@ -7,8 +7,8 @@
 
     padding: 1rem;
     margin-bottom: 2rem;
-
     width: 50%;
+    min-width: 25rem;
 
     display: flex;
     justify-content: center;
