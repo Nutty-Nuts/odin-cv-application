@@ -25,6 +25,7 @@ export default function CurriculumVitae({ personal, education, experience }) {
                 <h3>Education</h3>
                 {RenderEducation(education)}
                 <h3>Experience</h3>
+                {RenderExperience(experience)}
             </div>
         </div>
     );
@@ -42,6 +43,27 @@ function RenderEducation(education) {
                     </div>
                 </div>
                 <div>{value.degree}</div>
+                <br />
+            </div>
+        );
+    });
+
+    return <div>{entries}</div>;
+}
+
+function RenderExperience(experience) {
+    const entries = Object.entries(experience).map((entry) => {
+        const [key, value] = entry;
+        return (
+            <div className="entry" key={key} value={value} id={key}>
+                <div className="entry-header">
+                    <div>{value.position}</div>
+                    <div className="entry-date">
+                        {value.startDate}-{value.endDate}
+                    </div>
+                </div>
+                <div>{value.company}</div>
+                <p>{value.description}</p>
                 <br />
             </div>
         );

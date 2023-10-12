@@ -7,6 +7,9 @@ import Education from "./components/Education";
 import Experience from "./components/Experience";
 import CurriculumVitae from "./components/CurriculumVitae";
 
+const lorem =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum risus id dignissim porttitor. Sed nisi purus, tincidunt ornare ante in, mollis faucibus lorem. Praesent ullamcorper vel tortor a lobortis. Suspendisse ultrices nibh quis nisi bibendum lobortis.  ";
+
 function App() {
     const [personal, setPersonal] = useState({
         name: "",
@@ -32,11 +35,17 @@ function App() {
     const [experienceList, setExperienceList] = useState({
         [uuid()]: {
             company: "XYZ Company",
-            position: "Junior Developer",
+            position: "Juniora Software Developer",
             startDate: "2030",
             endDate: "2031",
-            description:
-                "Performed basic front-end development as a junior developer",
+            description: lorem,
+        },
+        [uuid()]: {
+            company: "ABC Company",
+            position: "Software Developer",
+            startDate: "2031",
+            endDate: "2033",
+            description: lorem,
         },
     });
 
